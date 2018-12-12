@@ -5,6 +5,7 @@ describe("Main", () => {
     context("Case 1", function() {
       it("Should happen bla", function() {
         //roda o teste aqui
+        throw new Error("just and error");
       });
     });
     context("Case 2", function() {
@@ -15,6 +16,10 @@ describe("Main", () => {
   });
 
   describe("Method B", function() {
-    //bla bla bal
+    context("Case 2", function() {
+      it("Should happen bla bla", function() {
+        //roda o teste aqui
+      });
+    });
   });
 });
