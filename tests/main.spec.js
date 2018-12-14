@@ -1,25 +1,23 @@
-import { expect } from "chai";
-
 describe("Main", () => {
-  describe("Method A", function() {
-    context("Case 1", function() {
-      it("Should happen bla", function() {
-        //roda o teste aqui
-        throw new Error("just and error");
-      });
-    });
-    context("Case 2", function() {
-      it("Should happen bla bla", function() {
-        //roda o teste aqui
-      });
-    });
+  //roda uma vez, antes do bloco
+  before(function() {
+    console.log("before");
   });
 
-  describe("Method B", function() {
-    context("Case 2", function() {
-      it("Should happen bla bla", function() {
-        //roda o teste aqui
-      });
-    });
+  //roda uma vez, depois do bloco
+  after(function() {
+    console.log("after");
   });
+
+  beforeEach(function() {
+    console.log("beforeEach");
+  });
+
+  afterEach(function() {
+    console.log("afterEach");
+  });
+
+  it("test 1", function() {});
+
+  it("test 2", function() {});
 });
